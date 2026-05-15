@@ -1,0 +1,8 @@
+.vs/
+bin/
+obj/
+*.user
+
+# Build and runtime output can be regenerated.
+FrameAnalyzer/bin/
+FrameAnalyzer/obj/
