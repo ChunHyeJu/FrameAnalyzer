@@ -74,13 +74,17 @@ Visual Studio에서는 `FrameAnalyzer.slnx`를 열고 `FrameAnalyzer` 프로젝�
 
 ```text
 FrameAnalyzer/
-  Form1.cs                         앱 초기 화면과 실행 버튼 구성
-  OpenCvPreviewNodeControl.cs       OpenCV 노드 공통 미리보기 컨트롤
-  AddOpenCVBaseNode.cs              기본 OpenCV 노드 등록
-  AddOpenCVDectectionNode.cs        검출 계열 노드 등록
-  NodeEditor/                       노드 캔버스, 포트, 연결, 실행 엔진
-  Controls_OpenCV/                  OpenCV 기본 처리 노드와 UI
-  Controls_OpenCV_Detection/        OpenCV 검출 처리 노드와 UI
+  App/                              앱 시작 화면과 WinForms 디자이너 파일
+  NodeEditor/
+    Contracts/                      노드 런타임 인터페이스
+    Core/                           노드, 포트, 연결, 그래프 실행 데이터
+    UI/                             노드 캔버스와 테마
+  Nodes/OpenCv/
+    Common/                         OpenCV 노드 공통 미리보기 컨트롤
+    Basic/                          OpenCV 기본 처리 노드와 UI
+    Detection/                      OpenCV 검출 처리 노드와 UI
+    OpenCvNodeRegistrar.cs          기본 OpenCV 노드 등록
+    OpenCvDetectionNodeRegistrar.cs 검출 계열 노드 등록
   Controls/                         공통 입력 컨트롤
 ```
 
