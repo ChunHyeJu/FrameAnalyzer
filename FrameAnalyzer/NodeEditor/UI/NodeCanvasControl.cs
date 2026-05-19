@@ -109,6 +109,7 @@ public class NodeCanvasControl : Control
         ["Contour Detect"] = "OpenCV/Contour Detect",
         ["Resize"] = "OpenCV/Resize",
         ["Channel Split"] = "OpenCV/Channel Split",
+        ["ROI Color Sampler"] = "OpenCV/ROI Color Sampler",
         ["Image Viewer"] = "OpenCV/Image Viewer",
         ["Background Subtraction"] = "OpenCV_Detection/Background Subtraction"
     };

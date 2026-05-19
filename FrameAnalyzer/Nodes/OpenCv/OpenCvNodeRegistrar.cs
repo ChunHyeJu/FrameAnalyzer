@@ -24,6 +24,7 @@ public class OpenCvNodeRegistrar
         RegisterContourDetectNode();
         RegisterResizeNode();
         RegisterChannelSplitNode();
+        RegisterROIColorSamplerNode();
         RegisterImageViewerNode();
     }
 
@@ -290,6 +291,25 @@ public class OpenCvNodeRegistrar
                 point.X,
                 point.Y,
                 new ChannelSplitControl(processor));
+
+            node.Processor = processor;
+            return node;
+        });
+    }
+
+    private void RegisterROIColorSamplerNode()
+    {
+        _nodeCanvas.RegisterNodeFactory("OpenCV/ROI Color Sampler", (canvas, point) =>
+        {
+            var processor = new ROIColorSamplerProcessor();
+
+            var node = canvas.AddNode(
+                "ROI Color Sampler",
+                new[] { "Image" },
+                new[] { "Image" },
+                point.X,
+                point.Y,
+                new ROIColorSamplerControl(processor));
 
             node.Processor = processor;
             return node;

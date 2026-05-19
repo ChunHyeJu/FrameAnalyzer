@@ -31,6 +31,7 @@ FrameAnalyzer는 Windows Forms 기반의 OpenCV 이미지 처리 노드 그래�
 - Contour Detect
 - Resize
 - Channel Split
+- ROI Color Sampler
 - Image Viewer
 
 ### OpenCV Detection 노드
